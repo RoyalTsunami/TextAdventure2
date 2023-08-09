@@ -1,10 +1,14 @@
 
-import character
-import scene
 import random
-import pond, test, centaur, trees
 
-inventory_items = []
+import centaur
+import character
+import pond
+import scene
+import test
+import trees
+
+inventory_items = set()
 
 
 def open_inventory():
@@ -35,7 +39,7 @@ def sword():
     print("You picked up a rusty sword. Your attack increased by 3.")
     character.character_strength += 3
     character.show_stats()
-    inventory_items.append("Rusty Sword")
+    inventory_items.add("Rusty Sword")
     show_inventory()
 
 
@@ -47,5 +51,5 @@ def boots():
     print("You obtain speedy boots. Your speed increased by 3.")
     character.character_speed += 3
     character.show_stats()
-    inventory_items.append("Speedy Boots")
+    inventory_items.add("Speedy Boots")
     show_inventory()
